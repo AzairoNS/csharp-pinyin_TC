@@ -125,17 +125,21 @@ namespace Pinyin
             return result;
         }
 
+        // get all chinese characters and positions in the list
         private void ZhPosition(List<string> input, List<string> res, List<int> positions)
         {
-            foreach (var (item, index) in input.Select((item, index) => (item, index)))
+            for (int i = 0; i < input.Count; ++i)
             {
-                if (item == null)
+                string item = input[i];
+                if (string.IsNullOrEmpty(item))
                     continue;
 
-                if (WordDict.ContainsKey(item) || TransDict.ContainsKey(item))
+                string simItem = TransDict.ContainsKey(item) ? TransDict[item] : item;
+
+                if (WordDict.ContainsKey(simItem))
                 {
-                    res.Add(TradToSim(item));
-                    positions.Add(index);
+                    res.Add(simItem);
+                    positions.Add(i);
                 }
             }
         }
