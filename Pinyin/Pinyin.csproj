@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;net6.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="dict\cantonese\License.txt" />
+    <EmbeddedResource Include="dict\cantonese\phrases_dict.txt" />
+    <EmbeddedResource Include="dict\cantonese\phrases_map.txt" />
+    <EmbeddedResource Include="dict\cantonese\trans_word.txt" />
+    <EmbeddedResource Include="dict\cantonese\user_dict.txt" />
+    <EmbeddedResource Include="dict\cantonese\word.txt" />
+    <EmbeddedResource Include="dict\mandarin\License.txt" />
+    <EmbeddedResource Include="dict\mandarin\phrases_dict.txt" />
+    <EmbeddedResource Include="dict\mandarin\phrases_map.txt" />
+    <EmbeddedResource Include="dict\mandarin\trans_word.txt" />
+    <EmbeddedResource Include="dict\mandarin\user_dict.txt" />
+    <EmbeddedResource Include="dict\mandarin\word.txt" />
+  </ItemGroup>
+
+</Project>
